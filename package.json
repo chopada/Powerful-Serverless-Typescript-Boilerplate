@@ -1,0 +1,48 @@
+{
+  "name": "powerful-serverless-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Serverless aws-nodejs-typescript template",
+  "main": "serverless.ts",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "local": "sls offline start",
+    "deploy": "serverless deploy",
+    "test": "cross-env NODE_ENV=dev mocha -r ts-node/register tests/*.test.ts --exit",
+    "coverage": "nyc --reporter lcov npm run test && open ./coverage/lcov-report/index.html"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.3.5"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^2.23.0",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/chai": "^4.3.1",
+    "@types/dotenv-safe": "^8.1.2",
+    "@types/lambda-tester": "^3.6.1",
+    "@types/mocha": "^9.1.1",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^14.14.25",
+    "@types/sinon": "^10.0.11",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "json-schema-to-ts": "^1.5.0",
+    "lambda-tester": "^4.0.1",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "serverless": "^2.23.0",
+    "serverless-esbuild": "^1.17.1",
+    "serverless-offline": "^8.8.0",
+    "sinon": "^14.0.0",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.9.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^4.1.3"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}

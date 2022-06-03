@@ -1,0 +1,14 @@
+{
+    "all": true,
+    "report-dir": "./coverage",
+    "extension": [
+        ".ts"
+    ],
+    "exclude": [
+        "src/functions/books/index.ts",
+        "src/model/dto/**.ts",
+        "src/model/vo/**.ts",
+        "coverage",
+        "tests"
+    ]
+}
